@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <title>Current Weather Detection</title>
+</head>
+<body>
+    <div class="box">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+
+        <div id="weathercon">
+            <i class="fas fa-sun" style="color: #fabd07;"></i>
+        </div>
+            <div class="info">
+                <h2 class="location"><i class="fas fa-street-view"></i>Dhaka, Bangladesh</h2>
+                <p id="date">WED | Mar 11 | 02:20AM </p>
+                <h1 class="temp">26.49'C</h1>
+                <h3 class="tem_min_max">MIN 26.49' | MAX 26.49'</h3>
+            </div>
+
+    </div>
+
+
+    <script>
+        const cDate = document.getAnimations("date");
+        let weatherCon = document.getElementById("weathercon");
+
+        const temStatus = "Clouds";
+
+    const getCurrentDay = () =>{
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tue";
+        weekday[3] = "Wed";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        let currentTime = new Date();
+        console.log(weekday[currentTime.getDay()]);
+    };
+    const getCurrentTime = () =>{
+        var months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+
+
+        ];
+        var currentDate = new Date();
+        var month =months[currentDate.getMonth() + 1];
+        var day = currentDate.getDate();
+        var year = currentDate.getFullYear();
+        
+        console.log(day + "/" + month + "/" + year);
+
+    }
+
+    getCurrentTime();
+    </script>
+</body>
+</html>
